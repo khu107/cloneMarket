@@ -5,13 +5,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import Logo from '../../asset/img/logo.jpg';
+import { Link } from 'react-router-dom';
 
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#">
-          <img src={Logo} style={{ width: '100px' }} />
+          <Link to="/">
+            <img src={Logo} style={{ width: '100px' }} />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -20,12 +23,52 @@ function NavScrollExample() {
             style={{ maxHeight: '300px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">홈페이지</Nav.Link>
-            <Nav.Link href="#action2">상의（남）</Nav.Link>
-            <Nav.Link href="#action2">바지（남）</Nav.Link>
-            <Nav.Link href="#action2">상의（여）</Nav.Link>
-            <Nav.Link href="#action2">바지（여）</Nav.Link>
-            <Nav.Link href="#action2">치마</Nav.Link>
+            <Nav.Link>
+              <Link style={{ textDecoration: 'none', color: 'black' }} to="/">
+                홈페이지
+              </Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link
+                style={{ textDecoration: 'none', color: 'black' }}
+                to="/namjesang"
+              >
+                상의（남）
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                style={{ textDecoration: 'none', color: 'black' }}
+                to="/namjepaji"
+              >
+                바지（남）
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                style={{ textDecoration: 'none', color: 'black' }}
+                to="/yojasang"
+              >
+                상의（여）
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                style={{ textDecoration: 'none', color: 'black' }}
+                to="/yojapaji"
+              >
+                바지（여자）
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                style={{ textDecoration: 'none', color: 'black' }}
+                to="/chima"
+              >
+                치마
+              </Link>
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
