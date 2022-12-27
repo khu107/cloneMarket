@@ -4,6 +4,7 @@ import { Grid, Img, Item, Span } from './style';
 import Namja1 from '../../asset/img/namje1.jpg';
 import Namja2 from '../../asset/img/namje2.jpg';
 import yoja3 from '../../asset/img/yoje3.jpg';
+import Best from '../../component/Best';
 function index() {
   return (
     <div>
@@ -24,6 +25,7 @@ function index() {
           <Img src={yoja3} alt="" srcset="" /> <Span>상의（여）</Span>
         </Item>
       </Grid>
+      <Best />
     </div>
   );
 }
