@@ -5,6 +5,7 @@ import Namja1 from '../../asset/img/namje1.jpg';
 import Namja2 from '../../asset/img/namje2.jpg';
 import yoja3 from '../../asset/img/yoje3.jpg';
 import Best from '../../component/Best';
+import { Link } from 'react-router-dom';
 function index() {
   return (
     <div>
@@ -14,8 +15,11 @@ function index() {
 
       <Grid>
         <Item>
-          <Img src={Namja1} alt="" srcset="" />
-          <Span>상의（남）</Span>
+          <Link to="/namjesang">
+            {' '}
+            <Img src={Namja1} alt="rasm" srcset="" />
+            <Span>상의（남）</Span>
+          </Link>
         </Item>
         <Item>
           <Img src={Namja2} alt="" srcset="" />

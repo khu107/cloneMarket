@@ -9,20 +9,26 @@ export const Wrapper = styled.div`
 `;
 
 export const Img = styled.img`
+  margin-bottom: 10px;
+
   width: 100%;
   height: 600px;
 `;
 export const ImgCon = styled.div`
   width: 100%;
   height: 110px;
-  border-bottom: 1px solid red;
+  border-bottom: 0.5px solid black;
 `;
 export const ImgMap = styled.img`
-  display: inline-block;
-  justify-content: space-around;
-  border: 1px solid black;
+  border-radius: 10%;
+  margin: 0 10px;
+  border: 0.5px solid black;
   width: 100px;
   height: 100px;
 `;
 
 export const DetailInfo = styled.div``;
+export const H1 = styled.h2`
+  margin-top: 10px;
+  color: red;
+`;
