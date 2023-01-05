@@ -10,6 +10,7 @@ export const Grid = styled.div`
 export const Img = styled.img`
   width: 100%;
 `;
+
 export const Item = styled(Link)`
   cursor: pointer;
   position: relative;

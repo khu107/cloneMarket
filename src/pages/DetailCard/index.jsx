@@ -7,23 +7,23 @@ import { useSelector } from 'react-redux';
 
 const DetailCard = () => {
   const [change, setchange] = useState(0);
-  const detailCard = useSelector((state) => {
-    return state.best;
-  });
   const { id } = useParams();
+  const detailCard = useSelector((state) => state.best);
+  const { url, price, title, description } = detailCard.bestdata[id];
+
   return (
     <Wrapper>
-      <Img src={detailCard.bestdata[id - 1].url[change]} />
+      <Img src={url[change]} />
 
       <ImgCon>
-        {detailCard.bestdata[id - 1].url.map((v, i) => {
+        {url.map((v, i) => {
           return <ImgMap onClick={() => setchange(i)} src={v} alt="rasm" />;
         })}
       </ImgCon>
       <DetailInfo>
-        <H1>₩{detailCard.bestdata[id - 1].price}</H1>
-        <span>{detailCard.bestdata[id - 1].title}</span>
-        <span>{detailCard.bestdata[id - 1].description}</span>
+        <H1>₩{price}</H1>
+        <span>{title}</span>
+        <span>{description}</span>
       </DetailInfo>
     </Wrapper>
   );

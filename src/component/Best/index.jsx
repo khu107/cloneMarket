@@ -17,7 +17,10 @@ export default function Best() {
       <CardGrid>
         {bestData.bestdata.map((v) => {
           return (
-            <Link style={{ textDecoration: 'none' }} to={`/home/${v.id}`}>
+            <Link
+              style={{ textDecoration: 'none', color: 'black' }}
+              to={`/home/${v.id}`}
+            >
               <BestCard {...v} />;
             </Link>
           );

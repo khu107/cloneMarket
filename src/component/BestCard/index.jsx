@@ -7,7 +7,7 @@ function index(props) {
     <CartContainer>
       <Img src={props.url[0]} alt="alt" srcset="" />
       <H4>{props.title}</H4>
-      <Span>{props.price}</Span>
+      <Span>₩{props.price}</Span>
     </CartContainer>
   );
 }
