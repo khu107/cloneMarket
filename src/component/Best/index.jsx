@@ -21,7 +21,7 @@ export default function Best() {
               style={{ textDecoration: 'none', color: 'black' }}
               to={`/home/${v.id}`}
             >
-              <BestCard {...v} />;
+              <BestCard {...v} />
             </Link>
           );
         })}
